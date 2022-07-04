@@ -51,7 +51,7 @@ int main() {
    std::cout << "You lose, computer wins :(\n\n";
    
  } else if (user == 1 && computer == 3) {
-   std::cout << "Rock beats Scissors\n!";
+   std::cout << "Rock beats Scissors!\n";
    std::cout << "You win! :)\n\n";
    
  } else if (user == 2 && computer == 1) {
