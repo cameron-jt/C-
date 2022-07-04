@@ -1,0 +1,79 @@
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+  
+ srand(time(NULL));
+ int computer = rand() % 3 + 1;
+ int user = 0;
+
+ std::cout << "--------------------------\n";
+ std::cout << "Rock, Paper or Scissors!\n";
+ std::cout << "--------------------------\n";
+ std::cout << "1) Rock\n";  
+ std::cout << "2) Paper\n";
+ std::cout << "3) Scissors\n";
+ std::cout << "Shoot!\n";
+ std::cout << "--------------------------\n";
+
+ std::cout << "Choose an option: ";
+ std::cin >> user;
+ 
+ if (user == 1) {
+   std::cout << "You selected rock\n";
+ } else if (user == 2) {
+   std::cout << "You selected paper\n";
+ } else if (user == 3) {
+   std::cout << "You selected scissors\n";
+ } else {
+   std::cout << "Not a valid option\n";
+ }
+ std::cout << "--------------------------\n";
+ 
+ std::cout << "Computer has chosen:\n";
+ 
+ if (computer == 1) {
+   std::cout << "Rock\n";
+ } else if (computer == 2) {
+   std::cout << "Paper\n";
+ } else if (computer == 3) {
+   std::cout << "Scissors\n";
+ }
+ std::cout << "==========================\n";
+ 
+ std::cout << "Result:\n";
+ 
+ if (user == computer) {
+   std::cout << "Rematch!\n\n";
+   
+ } else if (user == 1 && computer == 2) {
+   std::cout << "Paper beats Rock...\n";
+   std::cout << "You lose, computer wins :(\n\n";
+   
+ } else if (user == 1 && computer == 3) {
+   std::cout << "Rock beats Scissors\n!";
+   std::cout << "You win! :)\n\n";
+   
+ } else if (user == 2 && computer == 1) {
+   std::cout << "Paper beats Rock!\n";
+   std::cout << "You win! :)\n\n";
+   
+ } else if (user == 2 && computer == 3) {
+   std::cout << "Scissors beats Paper...\n";
+   std::cout << "You lose,computer wins :(\n\n";
+   
+ } else if (user == 3 && computer == 1) {
+   std::cout << "Rock beats Scissors...\n";
+   std::cout << "You lose, computer wins :(\n\n";
+   
+ } else if (user == 3 && computer == 2) {
+   std::cout << "Scissors beats Paper!\n";
+   std::cout << "You win! :)\n\n";
+   
+ } else if (user != 1,2,3) {
+   std::cout << "Please select a number betwen 1 and 3!\n\n";
+ }
+ 
+return 0;
+
+}
