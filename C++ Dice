@@ -1,0 +1,65 @@
+// Dice
+#include <iostream>
+#include <stdlib.h>
+
+int main () {
+    
+    srand (time(NULL));
+    int dice1 = rand() % 6 + 1;
+    int dice2 = rand() % 6 + 1;
+    int dice3 = rand() % 6 + 1;
+    int dice4 = rand() % 6 + 1;
+    int dice5 = rand() % 6 + 1;
+    int dice6 = rand() % 6 + 1;
+    
+    char f1, f2, f3;
+
+
+    
+    std::cout << "Roll 1: \n";
+    std::cout << dice1 + dice2 << " <----" << "\n";
+    
+    if (dice1 == dice2) {
+        std::cout << "Double rolled, roll again!\n\n";
+        std::cout << "Hit R to continue\n\n";
+        std::cin >> f1;
+         
+         for (int i = 0; i < 1000000; i++){
+          if(f1 != 'R'){
+              std::cout << "Please press R.\n";
+              std::cin >> f1;
+          }
+         }
+         
+        if (f1 = 'R'){
+    
+        std::cout << "Roll 2: \n";
+        std::cout << dice3 + dice4 << " <----\n";
+        
+    if (dice3 == dice4) {
+            std::cout << "Double rolled again, roll again!\n\n";
+            std::cout << "Hit R to continue\n\n";
+            std::cin >> f2;
+            
+            for (int j = 0; j < 1000000; j++){
+            if(f2 != 'R'){
+              std::cout << "Please press R.\n";
+              std::cin >> f1;
+            }
+            }
+        if(f2 = 'R'){
+            std::cout << "Roll 3: \n";
+            std::cout << dice5 + dice6 << " <----\n\n";
+            }
+            
+            
+    if (dice5 == dice6) {
+            std::cout << "Three doubles. Go to jail.\n";
+        }
+        
+        
+        }
+        }
+}
+    return 0;
+}
